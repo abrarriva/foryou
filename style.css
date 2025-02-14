@@ -1,0 +1,166 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 400% 400%;
+    animation: changeGradient 3s infinite alternate;
+    cursor: url('https://cdn-icons-png.flaticon.com/512/833/833472.png'), auto; /* Love cursor */
+}
+
+/* Animasi perubahan gradasi */
+@keyframes changeGradient {
+    0% { background: linear-gradient(45deg, #ff758c, #ff7eb3); }
+    50% { background: linear-gradient(45deg, #ff4d6d, #ff165d); }
+    100% { background: linear-gradient(45deg, #ff9ec4, #ff758c); }
+}
+
+/* Efek Partikel */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+}
+
+/* Halaman Login & Kata Cinta */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+    animation: fadeIn 2s ease-out;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #ff4d6d;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff165d;
+}
+
+/* Animasi teks */
+#quoteBox, #finalQuoteBox {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Styling untuk slide foto (Zigzag) */
+.photo-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0; /* Jarak antar foto */
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-slide img {
+    width: 80%; /* Gambar lebih kecil (80% dari lebar container) */
+    max-width: 800px; /* Maksimum lebar gambar */
+    height: auto; /* Menjaga proporsi asli gambar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+
+.photo-slide img:hover {
+    transform: scale(1.05); /* Gambar membesar sedikit saat dihover */
+}
+
+.photo-slide p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Container untuk slide foto */
+#photoSlidePage {
+    max-width: 1200px; /* Lebar maksimum container */
+    margin: 0 auto; /* Posisi container di tengah */
+    padding: 20px;
+    overflow-y: auto; /* Aktifkan scroll vertikal jika konten melebihi tinggi container */
+    max-height: 80vh; /* Maksimum tinggi container (80% dari tinggi viewport) */
+}
+
+/* Untuk Halaman Foto */
+#completionPage {
+    display: none;
+}
+
+/* Halaman Terakhir */
+#finalPhoto {
+    border-radius: 15px;
+}
+
+/* Slide Terakhir dengan Foto dan Tulisan "You Complete Me ❤️" */
+#finalSlide img {
+    width: 80%; /* Gambar lebih kecil (80% dari lebar container) */
+    max-width: 800px; /* Maksimum lebar gambar */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    margin-bottom: 20px;
+}
+
+#finalSlide h2 {
+    font-size: 24px;
+    color: #ff1493;
+    margin-top: 20px;
+}

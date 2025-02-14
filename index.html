@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>For My Linda 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+    <audio id="loveSong" src="ANDMESH - ANUGERAH TERINDAH (OFFICIAL MUSIC VIDEO).mp3" preload="auto"></audio>
+
+    <!-- Efek Partikel -->
+    <div id="particles-js"></div>
+
+    <!-- Halaman Login -->
+    <div class="container" id="loginPage">
+        <h1>💝 Welcome to Our LoveSpace Sweetie 💝</h1>
+        <p>masukin nama kamu dulu sayang! ❤</p>
+        <input type="text" id="username" placeholder="Masukkan nama..." required>
+        <button onclick="startLove()">💌 Masuk</button>
+    </div>
+
+    <!-- Halaman Cinta (slide pertama) -->
+    <div class="container hidden" id="lovePage">
+        <h1>Selamat datang Sayangku, <span id="userDisplay"></span>! 💕</h1>
+        <button onclick="nextSlide()">❓ Apa kamu sudah siap, sayang?</button>
+    </div>
+
+    <!-- Slide Kata-kata Romantis -->
+    <div class="container hidden" id="quotesPage">
+        <div id="quoteBox">
+            <!-- Kata-kata romantis akan ditampilkan disini -->
+        </div>
+        <button onclick="nextSlide()">💌 Next</button>
+    </div>
+
+    <!-- Slide Foto dengan Deskripsi (Zigzag) - 6 Foto -->
+    <div class="container hidden" id="photoSlidePage">
+        <div class="photo-slide left">
+            <img id="photo1" src="loveyou1.png" alt="Photo 1" onclick="viewImage('loveyou1.png')">
+            <p id="photo1-desc"></p>
+        </div>
+        <div class="photo-slide right">
+            <img id="photo2" src="loveyou2.png" alt="Photo 2" onclick="viewImage('loveyou2.png')">
+            <p id="photo2-desc"></p>
+        </div>
+        <div class="photo-slide left">
+            <img id="photo3" src="loveyou3.png" alt="Photo 3" onclick="viewImage('loveyou3.png')">
+            <p id="photo3-desc"></p>
+        </div>
+        <div class="photo-slide right">
+            <img id="photo4" src="loveyou6.png" alt="Photo 4" onclick="viewImage('loveyou4.png')">
+            <p id="photo4-desc"></p>
+        </div>
+        <div class="photo-slide left">
+            <img id="photo5" src="loveyou5.png" alt="Photo 5" onclick="viewImage('loveyou5.png')">
+            <p id="photo5-desc"></p>
+        </div>
+        <div class="photo-slide right">
+            <img id="photo6" src="loveyou4.png" alt="Photo 6" onclick="viewImage('loveyou6.png')">
+            <p id="photo6-desc"></p>
+        </div>
+        <button onclick="nextSlide()">➡️ Next</button>
+    </div>
+
+    <!-- Slide Kata-kata Romantis Terakhir -->
+    <div class="container hidden" id="finalQuotePage">
+        <div id="finalQuoteBox"></div>
+        <button onclick="nextSlide()">💌 Next stop:pelukan kamu!.🤗💕</button>
+    </div>
+
+    <!-- Slide Kata-kata Romantis Terakhir (Valentine) -->
+<div class="container hidden" id="finalQuotePage">
+    <div id="finalQuoteBox">
+        <p>Kamu rumahku selamanya, sayang 💖 Selamat Valentine buat kita! Semoga makin bucin tiap hari. 😘💕</p>
+    </div>
+    <button onclick="nextSlide()">💌 Next stop: pelukan kamu! 🤗💕</button>
+</div>
+
+    <!-- Slide Terakhir dengan Foto dan Tulisan "You Complete Me ❤️" -->
+    <div class="container hidden" id="finalSlide">
+            <img src="loveyou.jpg" alt="You Complete Me" style="width: 100%; max-width: 400px; border-radius: 10px;">
+            <h2 style="margin-top: 20px; color: #ffffff;">You Complete Me ❤️</h2>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
